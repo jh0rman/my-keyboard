@@ -22,6 +22,26 @@
                 = <&macro_tap &kp LA(N) N>
                 ;
         };
+        screenshot: screenshot {
+            label = "ZM_screenshot";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press   &kp RCMD>
+                , <&macro_tap     &kp LS(N5)>
+                , <&macro_release &kp RCMD>
+                ;
+        };
+        open_qmark: open_qmark {
+            label = "ZM_open_qmark";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp LS(FSLH)>
+                , <&macro_release &kp LALT>
+                ;
+        };
     };
 };
 
@@ -50,9 +70,9 @@
 // |     |     |     |  ~  |  ^  |  \  |   | PRSC | LFT  | DWN | RGT | = + |     |
 //                        |     |     |     |      |      |
                         bindings = <
-   &kp ESC  &kp N1  &kp N2    &kp N3    &kp N4  &kp N5     &kp N6          &kp N7    &kp N8    &kp N9     &kp N0     &kp DEL
-   &trans   &trans  &kp LBKT  &kp RBKT  &trans  &kp trans  &kp CLCK        &trans    &kp UP    &trans     &trans     &kp SQT
-   &trans   &trans  &trans    &trans    &trans  &trans     &kp LS(RG(N5))  &kp LEFT  &kp DOWN  &kp RIGHT  &kp EQUAL  &trans
+   &kp ESC  &kp N1  &kp N2    &kp N3    &kp N4  &kp N5     &kp N6       &kp N7    &kp N8    &kp N9     &kp N0     &kp DEL
+   &trans   &trans  &kp LBKT  &kp RBKT  &trans  &kp trans  &kp CLCK     &trans    &kp UP    &trans     &trans     &kp SQT
+   &trans   &trans  &trans    &trans    &trans  &trans     &screenshot  &kp LEFT  &kp DOWN  &kp RIGHT  &kp EQUAL  &trans
                                        &trans  &trans  &trans  &trans  &trans
                         >;
                 };
@@ -64,10 +84,10 @@
 // |    |     |     |     |     |     |   |      |      |      | BT0  | BT CLR |      |
 //                       |     |     |     |      |      |
                         bindings = <
-   &trans  &kp F1  &kp F3            &kp F11   &kp F12   &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV    &kp C_NEXT  &kp C_PP
-   &trans  &trans  &kp LA(LS(FSLH))  &kp FSLH  &kp BSLH  &trans  &trans      &trans        &trans        &trans        &trans      &kp LA(GRAVE)
-   &trans  &trans  &trans            &trans    &trans    &trans  &trans      &trans        &trans        &bt BT_SEL 0  &bt BT_CLR  &trans
-                                             &trans  &trans  &trans  &trans  &trans
+   &trans  &kp F1  &kp F3       &kp F11   &kp F12   &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV    &kp C_NEXT  &kp C_PP
+   &trans  &trans  &open_qmark  &kp FSLH  &kp BSLH  &trans  &trans      &trans        &trans        &trans        &trans      &kp LA(GRAVE)
+   &trans  &trans  &trans       &trans    &trans    &trans  &trans      &trans        &trans        &bt BT_SEL 0  &bt BT_CLR  &trans
+                                       &trans  &trans  &trans  &trans  &trans
                         >;
                 };
         };
