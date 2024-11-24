@@ -66,21 +66,21 @@
                 lower_layer {
 // -------------------------------------------------------------------------------
 // | ESC | 1 ! | 2 @ | 3 # | 4 $ | 5 % |   | 6 ^  | 7 &  | 8 * | 9 ( | 0 ) | DEL |
-// |     |     | [ { | ] } |     |     |   | CAPS | HOME | UP  | END |     | ' " |
+// |     |     | [ { | ] } | ; : |     |   | CAPS |      | UP  |     |     | ' " |
 // |     |     |     |     |     |     |   | PRSC | LFT  | DWN | RGT | = + |     |
 //                        |     |     |     |      |      |
                         bindings = <
-   &kp ESC  &kp N1  &kp N2    &kp N3    &kp N4  &kp N5  &kp N6       &kp N7    &kp N8    &kp N9     &kp N0     &kp DEL
-   &trans   &trans  &kp LBKT  &kp RBKT  &trans  &trans  &kp CLCK     &trans    &kp UP    &trans     &trans     &kp SQT
-   &trans   &trans  &trans    &trans    &trans  &trans  &screenshot  &kp LEFT  &kp DOWN  &kp RIGHT  &kp EQUAL  &trans
-                                   &trans  &trans  &trans  &trans  &trans
+   &kp ESC  &kp N1  &kp N2    &kp N3    &kp N4    &kp N5  &kp N6       &kp N7    &kp N8    &kp N9     &kp N0     &kp DEL
+   &trans   &trans  &kp LBKT  &kp RBKT  &kp SEMI  &trans  &kp CLCK     &trans    &kp UP    &trans     &trans     &kp SQT
+   &trans   &trans  &trans    &trans    &trans    &trans  &screenshot  &kp LEFT  &kp DOWN  &kp RIGHT  &kp EQUAL  &trans
+                                      &trans  &trans  &trans  &trans  &trans
                         >;
                 };
 
                 raise_layer {
 // ------------------------------------------------------------------------------------
 // |    | F1  | F3  | F11 | F12 |     |   | MUTE | VOL- | VOL+ | PREV |  NEXT  | PLAY |
-// |    |     |  ¿  | / ? | \ | |     |   | vSUG |      |      |      |        |  `   |
+// |    |     |  ¿  | / ? | \ | |     |   |      |      |      |      |        |  `   |
 // |    |     |     |     |     |     |   |      |      |      | BT0  | BT CLR |      |
 //                       |     |     |     |      |      |
                         bindings = <
